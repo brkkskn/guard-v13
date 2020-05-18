@@ -9,7 +9,7 @@ http
     res.end();
   })
   .listen(8080);
-//
+//tamamen thik ve LegitGangsters tarafından kodlanmıştır
 
 const Discord = require("discord.js");
 const client = new Discord.Client();
@@ -91,16 +91,19 @@ client.unload = command => {
 };
 
 const DBL = require("dblapi.js");
-const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTIzMjYzMzUyOTM2ODU3NiIsImJvdCI6dHJ1ZSwiaWF0IjoxNTgxMDA5ODg0fQ.ZrLr1fZZ6m6iBmD_66N4rqeQ9fmtrV7pnLoc8IfVe_c', client);
+const dbl = new DBL(
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTIzMjYzMzUyOTM2ODU3NiIsImJvdCI6dHJ1ZSwiaWF0IjoxNTgxMDA5ODg0fQ.ZrLr1fZZ6m6iBmD_66N4rqeQ9fmtrV7pnLoc8IfVe_c",
+  client
+);
 
 // Optional events
-dbl.on('posted', () => {
-  console.log('Server count posted!');
-})
+dbl.on("posted", () => {
+  console.log("Server count posted!");
+});
 
-dbl.on('error', e => {
- console.log(`Oops! ${e}`);
-})
+dbl.on("error", e => {
+  console.log(`Oops! ${e}`);
+});
 client.on("guildBanAdd", async (guild, user) => {
   let kontrol = await db.fetch(`dil_${guild.id}`);
   let kanal = await db.fetch(`bank_${guild.id}`);
