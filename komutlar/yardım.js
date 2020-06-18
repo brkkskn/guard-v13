@@ -48,11 +48,11 @@ module.exports.run = async (client, message, args) => {
       )
       .addField(
         `Bot`,
-        `\`help\`, \`language\`, \`bot-info\`, \`settings\`, \`reboot\`, \`prefix\`, \`prefix-reset\``
+        `\`help\`, \`language\`, \`bot-bilgi\`, \`settings\`, \`reboot\`, \`prefix\`, \`prefix-reset\``
       )
       .addField(
-        `Security System`,
-        `\`security\`, \`security-reset\`, \`security-add-role\`, \`security-addd-role-reset\`, \`security-remove-role\`, \`security-add-role-reset\`, \`security-fake-role\`, \`security-fake-role-reset\``
+        `Güvenlik Sistemi`,
+        `\`Güvenlik\`, \`Güvenlik-reset\`, \`Güvenlik-add-role\`, \`Güvenlik-add-role-reset\`, \`Güvenlik-sil-rolü\`, \`Güvenlik-add-role-reset\`, \`security-fake-role\`, \`security-fake-role-reset\``
       )
       .addField(
         `Autotag System`,
@@ -60,15 +60,15 @@ module.exports.run = async (client, message, args) => {
       )
       .addField(
         `Role Protection`,
-        `\`role-protection\`, \`role-protection-reset\`, \`role-protection-role\`, \`role-protection-role-reset\`, \`role-limit\`, \`role-limit-reset\``
+        `\`role-Koruması\`, \`role-Koruması-reset\`, \`role-Koruması-role\`, \`role-Koruması-role-reset\`, \`role-limit\`, \`role-limit-reset\``
       )
       .addField(
-        `Channel Protection`,
-        `\`channel-protection\`, \`channel-protection-reset\``
+        `Channel Koruması`,
+        `\`channel-Koruması\`, \`channel-Koruması-reset\``
       )
       .addField(
-        `Ban Protection`,
-        `\`ban-protection\`, \`ban-protection-reset\`, \`ban-limit\`, \`ban-limit-role\`, \`ban-limit-reset\`, \`ban-limit-role-reset\``
+        `Ban Koruması`,
+        `\`ban-Koruması\`, \`ban-koruma-sıfırla\`, \`ban-limit\`, \`ban-limit-rol\`, \`ban-limit-sıfırla\`, \`ban-limit-rol-sıfırla\``
       )
       .addField(
         `Backups`,
