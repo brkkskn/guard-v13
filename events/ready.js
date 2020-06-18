@@ -9,10 +9,10 @@ module.exports = async bot => {
   //bot.shard.fetchClientValues("users.size").then(async results2 => {
 //  let shardi = bot.shard.id + 1;
   var oyun = [
-    "Life with Guard Bot beautiful!",
+    "BU MRGUARD BORUMU!",
     "Hayat MRGUARD ile güzel!",
     "Güvenlik Sistemi!",
-    "Faster Security System!",
+    "MRGUARD GÜVENLİ VE HIZLI!",
     "Version: v0.1",
     "g!help | g!invite | g!prefix",
     //`Shard: ${shardi}/${bot.shard.count}`,
