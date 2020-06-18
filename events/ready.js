@@ -10,7 +10,7 @@ module.exports = async bot => {
 //  let shardi = bot.shard.id + 1;
   var oyun = [
     "Life with Guard Bot beautiful!",
-    "Hayat Guard Bot ile güzel!",
+    "Hayat MRGUARD ile güzel!",
     "Güvenlik Sistemi!",
     "Faster Security System!",
     "Version: v0.1",
