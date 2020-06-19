@@ -10,11 +10,11 @@ module.exports.run = async (client, message, args) => {
   if (kontrol == "TR_tr") {
     const embed = new Discord.RichEmbed()
       .setDescription(
-        `Bot sürümü; **v0.1**, Prefix: **${prefix}**, Dil: **${kontrol}**\nSayfama bakmak için; [Tıkla!](https://www.mrquake.com/vote)`
+        `Bot sürümü; **v0.1**, Prefix: **${prefix}**, Dil: **${kontrol}**\n`
       )
       .addField(
         `Bot`,
-        `\`yardım\`, \`dil\`, \`bot-bilgi\`, \`ayarlar\`, \`reboot\`, \`prefix\`, \`prefix-sıfırla\``
+        `\`yardım\`, \`dil\`, \`bot-bilgi\`, \`ayarlar\`,\`, \`prefix\`, \`prefix-sıfırla\``
       )
       .addField(
         `Güvenlik Sistemi`,

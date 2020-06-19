@@ -9,16 +9,16 @@ module.exports = async bot => {
   //bot.shard.fetchClientValues("users.size").then(async results2 => {
 //  let shardi = bot.shard.id + 1;
   var oyun = [
-    "BU MRGUARD BORUMU!",
-    "Hayat MRGUARD ile güzel!",
-    "Güvenlik Sistemi!",
-    "MRGUARD GÜVENLİ VE HIZLI!",
+    "SPECİAL BOT!",
+    "",
+    "GÜVENLİK BOTU!",
+    "",
     "Version: v0.1",
     "g!help | g!invite | g!prefix",
     //`Shard: ${shardi}/${bot.shard.count}`,
-    `${bot.guilds.size.toLocaleString()} Guilds! ${bot.guilds
+    `${bot.guilds.size.toLocaleString()}  ${bot.guilds
       .reduce((a, b) => a + b.memberCount, 0)
-      .toLocaleString()} Members!`
+      .toLocaleString()} Kullanıcı!`
   ];
 
   setInterval(async () => {
