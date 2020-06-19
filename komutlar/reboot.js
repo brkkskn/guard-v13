@@ -42,7 +42,7 @@ module.exports.run = async (client, message, args) => {
         var embed = new Discord.RichEmbed()
           .setTitle("**Merhaba Sahibim,**")
           .setDescription(
-            "Hazır beni yeniden başlatacaksın, bir [oy](https://top.gg/bot/665232633529368576/vote) verir misin?"
+            
           )
           .setColor("BLACK");
         message.channel.send(embed);
@@ -103,7 +103,7 @@ module.exports.conf = {
 };
 
 module.exports.help = {
-  name: "reboot",
+  name: "Reboot",
   description: "reboot",
   usage: "reboot"
 };

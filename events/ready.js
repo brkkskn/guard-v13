@@ -10,9 +10,9 @@ module.exports = async bot => {
 //  let shardi = bot.shard.id + 1;
   var oyun = [
     "SPECİAL BOT!",
-    "",
+    "s",
     "GÜVENLİK BOTU!",
-    "",
+    "s",
     "Version: v0.1",
     "g!help | g!invite | g!prefix",
     //`Shard: ${shardi}/${bot.shard.count}`,
