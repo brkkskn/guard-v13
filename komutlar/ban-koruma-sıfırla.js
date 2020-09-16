@@ -3,7 +3,7 @@ const Discord = require("discord.js"),
 
 module.exports.run = async (client, message, args) => {
   let kontrol = await db.fetch(`dil_${message.guild.id}`);
-  let prefix = (await db.fetch(`prefix_${message.guild.id}`)) || "g!";
+  let prefix = (await db.fetch(`prefix_${message.guild.id}`)) || "";
   if (kontrol == "TR_tr") {
     let kanal = await db.fetch(`bank_${message.guild.id}`)
     if (!kanal) {
