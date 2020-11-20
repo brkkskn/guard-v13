@@ -2,17 +2,10 @@ const chalk = require("chalk");
 const moment = require("moment");
 const Discord = require("discord.js");
 const ayarlar = require("../ayarlar.json");
+
 var prefix = ayarlar.prefix;
 
-module.exports = async bot => {
-  //bot.shard.fetchClientValues("guilds.size").then(async results => {
-  //bot.shard.fetchClientValues("users.size").then(async results2 => {
-//  let shardi = bot.shard.id + 1;
-  var oyun = [
-    "Revers BOT!",Shard: ${shardi}/${bot.shard.count}`,
-    
-      
-  ];
-
- 
+module.exports = client => {
+  client.user.setStatus("dnd");
+  client.user.setActivity("RΞVΞЯS Family")
 };

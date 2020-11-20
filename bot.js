@@ -855,7 +855,7 @@ client.on("guildDelete", async guild => {
 });*/
 
 client.elevation = message => {
-  if (!message.guild) {
+  if (!messag.guild) {
     return;
   }
   let permlvl = 0;
