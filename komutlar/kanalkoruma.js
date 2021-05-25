@@ -3,7 +3,7 @@ const db = require('quick.db')
 const ayarlar = require('../ayarlar.json')
  
 exports.run = async(client, message, args) => {
-if(!message.member.permissions.has('MANAGE_CHANNELS')) return message.channel.send('Bu komutu kullanabilmek için `Yönetici` yetkisine sahip olmalısın')
+if(!message.member.permissions.has("ADMINISTRATOR")) return message.channel.send('Bu komutu kullanabilmek için `Yönetici` yetkisine sahip olmalısın')
 let prefix = ayarlar.prefix
 
   if (!args[0]) {
