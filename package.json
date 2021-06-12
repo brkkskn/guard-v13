@@ -16,7 +16,6 @@
     "moment": "^2.29.1",
     "moment-duration-format": "^2.3.2",
     "express-promise-router": "^4.1.0",
-    "node-fetch": "^2.6.1",
     "node-fetch-npm": "^2.0.4"
   },
   "engines": {
