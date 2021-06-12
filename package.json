@@ -2,9 +2,9 @@
   "name": "hello-express",
   "version": "0.0.1",
   "description": "CodeWork v12 Boş Altyapı",
-  "main": "index.js",
+  "main": "bot.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node bot.js"
   },
   "dependencies": {
     "express": "^4.17.1",
