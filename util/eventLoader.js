@@ -1,9 +1,4 @@
-const req = event => require(`../events/${event}`)
-require('events').EventEmitter.defaultMaxListeners = 15;
-
+const reqEvent = (event) => require(`../events/${event}`);
 module.exports = client => {
-    client.on('ready',() => req('ready')(client))
-    client.on('message',req('message'))
-   
-
-}
+  client.on('message', reqEvent('message'));
+};
