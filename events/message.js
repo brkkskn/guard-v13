@@ -1,13 +1,11 @@
-const Discord = require("discord.js");
 const ayarlar = require('../ayarlar.json');
 let talkedRecently = new Set();
-
 module.exports = message => {
   if (talkedRecently.has(message.author.id)) {
     return;
   }
   talkedRecently.add(message.author.id);
-	setTimeout(() => {
+    setTimeout(() => {
     talkedRecently.delete(message.author.id);
   }, 2500);
   let client = message.client;
@@ -28,3 +26,4 @@ module.exports = message => {
   }
 
 };
+
