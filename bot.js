@@ -14,8 +14,7 @@ app.listen(process.env.PORT);
 
 //READY.JS
 
-const Discord = require('discord.js');
-const client = new Discord.Client();
+const client = new discord.Client();
 client.on('ready', async () => {
    client.appInfo = await client.fetchApplication();
   setInterval( async () => {
@@ -36,8 +35,8 @@ require('./util/eventLoader.js')(client);
 
 //KOMUT ALGILAYICI
 
-client.commands = new Discord.Collection();
-client.aliases = new Discord.Collection();
+client.commands = new discord.Collection();
+client.aliases = new discord.Collection();
 fs.readdir('./komutlar/', (err, files) => {
     if (err) console.error(err);
     log(`${files.length} komut yüklenecek.`);
