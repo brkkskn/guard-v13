@@ -132,13 +132,13 @@ let kanal = await db.fetch(`antiraidK_${member.guild.id}`)== "anti-raid-aç"
   var darknesyt = member.guild.owner
   if (member.user.bot === true) {
      if (db.fetch(`botizin_${member.guild.id}.${member.id}`) == "aktif") {
-    let darknesguardv2 = new Discord.MessageEmbed()
+    let darknesguardv2 = new discord.MessageEmbed()
       .setColor("RANDOM")
       .setThumbnail(member.user.avatarURL())
       .setDescription(`**${member.user.tag}** (${member.id}) adlı bota bir yetkili izin verdi eğer kaldırmak istiyorsanız **!bot-izni kaldır <botid>**.`);
     darknesyt.send(darknesguardv2);
      } else {
-       let izinverilmemişbot = new Discord.MessageEmbed()
+       let izinverilmemişbot = new discord.MessageEmbed()
       .setColor("RANDOM")
       .setThumbnail(member.user.avatarURL())
       .setDescription("**" + member.user.tag +"**" + " (" + member.id+ ") " + "adlı bot sunucuya eklendi ve banladım eğer izin vermek istiyorsanız **" + "!bot-izni ver <botid>**")
@@ -386,7 +386,7 @@ client.on('channelDelete', async channel => {
    client.on('channelNameUpdate', async channel => {
   const c = channel.guild.channels.cache.get(db.fetch(`nordxmodlog${channel.guild.id}`));
   if (!c) return;
-    var embed = new Discord.MessageEmbed()
+    var embed = new discord.MessageEmbed()
                     .addField(`Kanal İsmi değiştirildi`, ` Yeni İsmi: \`${channel.name}\`\nKanal ID: ${channel.id}`)
                     .setTimestamp()
                     .setColor("RANDOM")
@@ -401,7 +401,7 @@ client.on('emojiCreate', emoji => {
   const c = emoji.guild.channels.cache.get(db.fetch(`nordxmodlog${emoji.guild.id}`));
   if (!c) return;
 
-    let embed = new Discord.MessageEmbed()
+    let embed = new discord.MessageEmbed()
                     .addField(`Emoji oluşturuldu`, ` İsmi: \`${emoji.name}\`\n Gif?: **${emoji.animated}**\nEmoji ID: ${emoji.id}`)
                     .setTimestamp()
                     .setColor("RANDOM")
@@ -413,7 +413,7 @@ client.on('emojiDelete', emoji => {
   const c = emoji.guild.channels.cache.get(db.fetch(`nordxmodlog${emoji.guild.id}`));
   if (!c) return;
 
-    let embed = new Discord.MessageEmbed()
+    let embed = new discord.MessageEmbed()
                     .addField(`Emoji silindi`, ` İsmi: \`${emoji.name}\`\n Gif? : **${emoji.animated}**\nSilinen Emoji ID: ${emoji.id}`)
                     .setTimestamp()
                     .setColor("RANDOM")
@@ -425,7 +425,7 @@ client.on('emojiUpdate', (oldEmoji, newEmoji) => {
   const c = newEmoji.guild.channels.cache.get(db.fetch(`nordxmodlog${newEmoji.guild.id}`));
   if (!c) return;
 
-    let embed = new Discord.MessageEmbed()
+    let embed = new discord.MessageEmbed()
                     .addField(`Emoji güncellendi`, ` Eski ismi: \`${oldEmoji.name}\`\n Yeni ismi: \`${newEmoji.name}\`\nEmoji ID: ${oldEmoji.id}`)
                     .setTimestamp()
                     .setColor("RANDOM")
@@ -440,7 +440,7 @@ client.on('messageDelete', async message => {
     const channel = message.guild.channels.cache.get(db.fetch(`nordxmodlog${message.guild.id}`));
   if (!channel) return;
   
-    let embed = new Discord.MessageEmbed()
+    let embed = new discord.MessageEmbed()
                     .setAuthor(`Silen Kişi: ${message.author.username}#${message.author.discriminator}`, message.author.avatarURL())
                     .setTitle("Mesaj silindi")                
                     .addField(`Silinen mesaj : ${message.content}`,`Silindiği Kanal: ${message.channel.name}`)
@@ -458,7 +458,7 @@ client.on('messageUpdate', async(oldMessage, newMessage) => {
     const channel = oldMessage.guild.channels.cache.get(db.fetch(`nordxmodlog${oldMessage.guild.id}`));
     if(!channel) return;
 
-    let embed = new Discord.MessageEmbed()
+    let embed = new discord.MessageEmbed()
     .setTitle("Mesaj güncellendi!")
     .addField("Eski mesaj : ",`${oldMessage.content}`)
     .addField("Yeni mesaj : ",`${newMessage.content}`)
@@ -475,7 +475,7 @@ client.on('roleCreate', async (role) => {
     const channel = role.guild.channels.cache.get(db.fetch(`nordxmodlog${role.guild.id}`));
   if (!channel) return;
   
-    let embed = new Discord.MessageEmbed()
+    let embed = new discord.MessageEmbed()
 .addField(`Rol oluşturuldu`, `Rol ismi: \`${role.name}\`\nRol ID: ${role.id}`)                    
 .setTimestamp()
 .setColor("RANDOM")
@@ -490,7 +490,7 @@ client.on('roleDelete', async (role) => {
     const channel = role.guild.channels.cache.get(db.fetch(`nordxmodlog${role.guild.id}`));
   if (!channel) return;
   
-    let embed = new Discord.MessageEmbed()
+    let embed = new discord.MessageEmbed()
 .addField(`Rol silindi`, `Silinen Rol ismi: \`${role.name}\`\nSilinen Rol ID: ${role.id}`)                    
 .setTimestamp()
 .setColor("RANDOM")
@@ -513,14 +513,14 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
 
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
 
-    const embed = new Discord.MessageEmbed()
+    const embed = new discord.MessageEmbed()
     .setColor("RANDOM")
     .setDescription(`${newMember.user} adlı kullanıcı \`${newUserChannel.name}\` isimli sesli kanala giriş yaptı!`)
     kanal.send(embed);
     
   } else if(newUserChannel === undefined){
 
-    const embed = new Discord.MessageEmbed()
+    const embed = new discord.MessageEmbed()
     .setColor("RANDOM")
     .setDescription(`${newMember.user} adlı kullanıcı sesli kanaldan çıkış yaptı!`)
     kanal.send(embed);
